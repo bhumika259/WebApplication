@@ -1,0 +1,9 @@
+<app-employee-dashboard></app-employee-dashboard>
+// In your template
+<div>
+  <input type="checkbox" (change)="onSelectAllChange()" [(ngModel)]="selectAll"> Select All
+</div>
+
+<div *ngFor="let option of options">
+  <input type="checkbox" [(ngModel)]="option.selected" (change)="onOptionChange()"> {{ option.name }}
+</div>
